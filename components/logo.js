@@ -19,7 +19,7 @@ padding: 10px
 `
 
 const Logo = () => {
-  const catImg = `/images/cat${useColorModeValue('', '-dark')}.png`
+  const catImg = `/images/cat.png`
   return (
     <Link href="/">
       <a>
