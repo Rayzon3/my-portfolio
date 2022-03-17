@@ -68,12 +68,14 @@ const NavBar = props => {
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
         >
-          <LinkItem href="/skills" path={path}>
-            Skill Set
-          </LinkItem>
-          <LinkItem href="/projects" path={path}>
-            Projects
-          </LinkItem>
+         <Flex align="center" ml={5}>
+            <Link href='https://github.com/Rayzon3'>
+              GitHub
+            </Link>
+            <Link href='https://www.linkedin.com/in/rahulbhardwaj03' ml={4}>
+              Linkedin
+            </Link>
+         </Flex>
         </Stack>
         <Box flex={1} align="right">
           <ThemeToggleButton />
@@ -86,14 +88,11 @@ const NavBar = props => {
                 aria-label="Options"
               />
               <MenuList>
-                <NextLink href="/" passHref>
-                  <MenuItem as={Link}>About</MenuItem>
+                <NextLink href="https://github.com/Rayzon3" passHref>
+                  <MenuItem as={Link}>GitHub</MenuItem>
                 </NextLink>
-                <NextLink href="/skills" passHref>
-                  <MenuItem as={Link}>Skill Set</MenuItem>
-                </NextLink>
-                <NextLink href="/projects" passHref>
-                  <MenuItem as={Link}>Projects</MenuItem>
+                <NextLink href="https://www.linkedin.com/in/rahulbhardwaj03" passHref>
+                  <MenuItem as={Link}>Linkedin</MenuItem>
                 </NextLink>
               </MenuList>
             </Menu>

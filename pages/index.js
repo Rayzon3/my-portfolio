@@ -158,7 +158,7 @@ const Page = () => {
                     bg: 'gray.200'
                   }}
                 >
-                  View Source
+                  View Repository
                 </Button>
               </Stack>
             </Stack>
