@@ -241,8 +241,9 @@ const Page = () => {
                 color={useColorModeValue('gray.700', 'gray.400')}
                 px={3}
               >
-                This a cross platform moblie application made in Flutter. The users to carpool with their co-workers at their work
-                place.
+                This a cross platform moblie application made in Flutter. 
+                The users can use this app to carpool with their co-workers at their work
+                place easily.
               </Text>
               <Stack
                 width={'100%'}
