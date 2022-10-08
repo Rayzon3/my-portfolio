@@ -60,7 +60,7 @@ const Page = () => {
           projects. Passionate about web development and ML.
         </Paragraph>
         <Box align="center" my={4}>
-          <Link href="https://drive.google.com/file/d/1Fa1W0XhQ-2Z14WPShJGTdxhMWnFlfGJn/view?usp=sharing">
+          <Link href="https://drive.google.com/file/d/1EQ7CnuJUJ2DfFgYex05NipTNbV0KxxUA/view?usp=sharing">
           <Button colorScheme="teal" rightIcon={<ChevronRightIcon />}>
             My Resume
           </Button>
