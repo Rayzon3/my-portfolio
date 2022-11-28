@@ -7,22 +7,26 @@ import {
   Button,
   Stack,
   Center,
-  Text
+
+  Tooltip
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Section from '../components/layouts/section'
 import Paragraph from '../components/layouts/paragraph'
 import Link from 'next/link'
+import Card from '../components/card'
+import { data } from '../projectData'
 
 const Page = () => {
   return (
     <Container>
       <Box
         borderRadius="lg"
-        bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+        bg={useColorModeValue('white', 'gray.950')}
         p={3}
         mb={5}
         align="center"
+        border="2px"
       >
         Hello, I&apos;m a software developer!
       </Box>
@@ -54,16 +58,34 @@ const Page = () => {
         <Heading as="h3" variant="section-title">
           About
         </Heading>
-        <Paragraph>
-          Hey! I am a software developer based in India. I like building stuff
-          and learning new technologies. In my free time I work on cool
-          projects. Passionate about web development and ML.
-        </Paragraph>
+        <Box
+          borderRadius="lg"
+          bg={useColorModeValue('white', 'gray.950')}
+          p={3}
+          mb={5}
+          align="center"
+          border="2px"
+          mt={'4px'}
+        >
+          <Paragraph>
+            Hey! I am a software developer based in India. I like building stuff
+            and learning new technologies. In my free time I work on cool
+            projects. Passionate about web development and ML.
+          </Paragraph>
+        </Box>
+
         <Box align="center" my={4}>
           <Link href="https://drive.google.com/file/d/1EQ7CnuJUJ2DfFgYex05NipTNbV0KxxUA/view?usp=sharing">
-          <Button colorScheme="teal" rightIcon={<ChevronRightIcon />}>
-            My Resume
-          </Button>
+            <Button
+              colorScheme="white"
+              bg={useColorModeValue('white', 'gray.950')}
+              rightIcon={<ChevronRightIcon />}
+              rounded="full"
+              borderColor={useColorModeValue('black', 'white')}
+              variant="outline"
+            >
+              My Resume
+            </Button>
           </Link>
         </Box>
       </Section>
@@ -71,262 +93,234 @@ const Page = () => {
         <Heading as="h3" variant="section-title" mt={20}>
           Skill Set
         </Heading>
-        <Stack direction="row" mt={4} spacing="24px">
-          <Image
-            align="left"
-            alt="TypeScript"
-            width="26px"
-            src="https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg"
-          />
-          <Image
-            align="left"
-            alt="Dart"
-            width="26px"
-            src="https://www.vectorlogo.zone/logos/dartlang/dartlang-icon.svg"
-          />
-          <Image
-            align="left"
-            alt="React"
-            width="26px"
-            src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg"
-          />
-          <Image
-            align="left"
-            alt="Node.js"
-            width="26px"
-            src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg"
-          />
-          <Image
-            align="left"
-            alt="Flutter"
-            width="26px"
-            src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg"
-          />
-          <Image
-            align="left"
-            alt="Firebase"
-            width="26px"
-            src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg"
-          />
-          <Image
-            align="left"
-            alt="Postgresql"
-            width="26px"
-            src="https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg"
-          />
-          <Image
-            align="left"
-            alt="TensorFlow"
-            width="26px"
-            src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg"
-          />
+        <Stack direction="row" mt={4} spacing={{ base: 'auto', md: '24px' }}>
+          <Tooltip
+            label="TypeScript"
+            border="2px"
+            textColor={useColorModeValue('gray.900', 'white')}
+            bg={useColorModeValue('white', 'gray.900')}
+            borderColor={useColorModeValue('gray.900', 'white')}
+            rounded="md"
+          >
+            <Box
+              boxSize="fit-content"
+              textAlign={'center'}
+              alignContent={'center'}
+              alignItems={'center'}
+              bg={useColorModeValue('white', 'gray.900')}
+              w="10"
+              h="10"
+              rounded={'md'}
+              border="2px"
+              _hover={{ bg: useColorModeValue('gray.900', 'white') }}
+            >
+              <Center padding={1.5}>
+                <Image
+                  align="center"
+                  alignContent={'center'}
+                  alignItems={'center'}
+                  alt="TypeScript"
+                  width="26px"
+                  src="https://www.vectorlogo.zone/logos/typescriptlang/typescriptlang-icon.svg"
+                />
+              </Center>
+            </Box>
+          </Tooltip>
+          <Tooltip
+            label="Node.Js"
+            border="2px"
+            textColor={useColorModeValue('gray.900', 'white')}
+            bg={useColorModeValue('white', 'gray.900')}
+            borderColor={useColorModeValue('gray.900', 'white')}
+            rounded="md"
+          >
+            <Box
+              boxSize="fit-content"
+              textAlign={'center'}
+              alignContent={'center'}
+              alignItems={'center'}
+              bg={useColorModeValue('white', 'gray.900')}
+              w="10"
+              h="10"
+              rounded={'md'}
+              border="2px"
+              _hover={{ bg: useColorModeValue('gray.900', 'white') }}
+            >
+              <Center padding={1.5}>
+                <Image
+                  align="left"
+                  alt="Node.js"
+                  width="26px"
+                  src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg"
+                />
+              </Center>
+            </Box>
+          </Tooltip>
+          <Tooltip
+            label="React"
+            border="2px"
+            textColor={useColorModeValue('gray.900', 'white')}
+            bg={useColorModeValue('white', 'gray.900')}
+            borderColor={useColorModeValue('gray.900', 'white')}
+            rounded="md"
+          >
+            <Box
+              boxSize="fit-content"
+              textAlign={'center'}
+              alignContent={'center'}
+              alignItems={'center'}
+              bg={useColorModeValue('white', 'gray.900')}
+              w="10"
+              h="10"
+              rounded={'md'}
+              border="2px"
+              _hover={{ bg: useColorModeValue('gray.900', 'white') }}
+            >
+              <Center padding={1.5}>
+                <Image
+                  align="left"
+                  alt="React"
+                  width="26px"
+                  src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg"
+                />
+              </Center>
+            </Box>
+          </Tooltip>
+          <Tooltip
+            label="PostgreSQL"
+            border="2px"
+            textColor={useColorModeValue('gray.900', 'white')}
+            bg={useColorModeValue('white', 'gray.900')}
+            borderColor={useColorModeValue('gray.900', 'white')}
+            rounded="md"
+          >
+            <Box
+              boxSize="fit-content"
+              textAlign={'center'}
+              alignContent={'center'}
+              alignItems={'center'}
+              bg={useColorModeValue('white', 'gray.900')}
+              w="10"
+              h="10"
+              rounded={'md'}
+              border="2px"
+              _hover={{ bg: useColorModeValue('gray.900', 'white') }}
+            >
+              <Center padding={1.5}>
+                <Image
+                  align="left"
+                  alt="Postgresql"
+                  width="26px"
+                  src="https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg"
+                />
+              </Center>
+            </Box>
+          </Tooltip>
+          <Tooltip
+            label="MongoDB"
+            border="2px"
+            textColor={useColorModeValue('gray.900', 'white')}
+            bg={useColorModeValue('white', 'gray.900')}
+            borderColor={useColorModeValue('gray.900', 'white')}
+            rounded="md"
+          >
+            <Box
+              boxSize="fit-content"
+              textAlign={'center'}
+              alignContent={'center'}
+              alignItems={'center'}
+              bg={useColorModeValue('white', 'gray.900')}
+              w="10"
+              h="10"
+              rounded={'md'}
+              border="2px"
+              _hover={{ bg: useColorModeValue('gray.900', 'white') }}
+            >
+              <Center padding={1.5}>
+                <Image
+                  align="left"
+                  alt="MongoDB"
+                  width="26px"
+                  src="https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg"
+                />
+              </Center>
+            </Box>
+          </Tooltip>
+          <Tooltip
+            label="GraphQL"
+            border="2px"
+            textColor={useColorModeValue('gray.900', 'white')}
+            bg={useColorModeValue('white', 'gray.900')}
+            borderColor={useColorModeValue('gray.900', 'white')}
+            rounded="md"
+          >
+            <Box
+              boxSize="fit-content"
+              textAlign={'center'}
+              alignContent={'center'}
+              alignItems={'center'}
+              bg={useColorModeValue('white', 'gray.900')}
+              w="10"
+              h="10"
+              rounded={'md'}
+              border="2px"
+              _hover={{ bg: useColorModeValue('gray.900', 'white') }}
+            >
+              <Center padding={1.5}>
+                <Image
+                  align="left"
+                  alt="GraphQL"
+                  width="26px"
+                  src="https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg"
+                />
+              </Center>
+            </Box>
+          </Tooltip>
+          <Tooltip
+            label="Docker"
+            border="2px"
+            textColor={useColorModeValue('gray.900', 'white')}
+            bg={useColorModeValue('white', 'gray.900')}
+            borderColor={useColorModeValue('gray.900', 'white')}
+            rounded="md"
+          >
+            <Box
+              boxSize="fit-content"
+              textAlign={'center'}
+              alignContent={'center'}
+              alignItems={'center'}
+              bg={useColorModeValue('white', 'gray.900')}
+              w="10"
+              h="10"
+              rounded={'md'}
+              border="2px"
+              _hover={{ bg: useColorModeValue('gray.900', 'white') }}
+            >
+              <Center padding={1.5}>
+                <Image
+                  align="left"
+                  alt="Docker"
+                  width="26px"
+                  src="https://www.vectorlogo.zone/logos/docker/docker-icon.svg"
+                />
+              </Center>
+            </Box>
+          </Tooltip>
         </Stack>
       </Section>
       <Section delay={0.6}>
         <Heading as="h3" variant="section-title" mt={20}>
           Projects
         </Heading>
-        <Center py={4}>
-          <Stack
-            borderWidth="1px"
-            borderRadius="lg"
-            w={{ sm: '100%', md: '360px' }}
-            height={{ sm: '200px', md: '18rem' }}
-            direction={{ base: 'column', md: 'row' }}
-            bg={useColorModeValue('white', '#202023')}
-            boxShadow={'2xl'}
-            padding={4}
-          >
-            <Stack flex={1} flexDirection="column" align="center" pt={2}>
-              <Heading fontSize={'2xl'} fontFamily={'body'}>
-                Sentiment Analysis Web App
-              </Heading>
-              <Text
-                textAlign={'center'}
-                color={useColorModeValue('gray.700', 'gray.400')}
-                px={3}
-              >
-                This is a web application that predicts the sentiment of a
-                sentence or paragraph using the LSTM and CNN deep learning
-                models. I trained the model the sentiment-140 dataset which
-                consists of 1.6 million tweets.
-              </Text>
-              <Stack
-                width={'100%'}
-                mt={'2rem'}
-                direction={'row'}
-                padding={2}
-                alignItems={'center'}
-              >
-                <Link href="https://github.com/Rayzon3/Natural-Language-Processing">
-                  <Button
-                    flex={1}
-                    fontSize={'sm'}
-                    rounded={'full'}
-                    _focus={{
-                      bg: 'gray.200'
-                    }}
-                  >
-                    View Repository
-                  </Button>
-                </Link>
+        <Stack flex={1} flexDirection="column" align="center" pt={2}>
+          {
+            data.map((project, idx) => (
+              <Stack key={idx} flex={1} flexDirection="column" align="center" pt={2}>
+                <Card id={project.id} title={project.title} description={project.description} repoLink={project.gitHub_link}/>
               </Stack>
-            </Stack>
-          </Stack>
-        </Center>
-        <Center py={4}>
-          <Stack
-            borderWidth="1px"
-            borderRadius="lg"
-            w={{ sm: '100%', md: '360px' }}
-            height={{ sm: '200px', md: '18rem' }}
-            direction={{ base: 'column', md: 'row' }}
-            bg={useColorModeValue('white', '#202023')}
-            boxShadow={'2xl'}
-            padding={4}
-          >
-            <Stack flex={1} flexDirection="column" align="center" pt={2}>
-              <Heading fontSize={'2xl'} fontFamily={'body'}>
-                Hygge
-              </Heading>
-              <Text
-                textAlign={'center'}
-                color={useColorModeValue('gray.700', 'gray.400')}
-                px={3}
-              >
-                Hygge is forum website I made, using Next.js, TypeORM and
-                PostreSQL as the database. The frontend is made with tailwind.
-                One can create communities and posts in it.
-              </Text>
-              <Stack
-                width={'100%'}
-                mt={'2rem'}
-                direction={'row'}
-                padding={2}
-                alignItems={'center'}
-              >
-                <Link href="https://github.com/Rayzon3/hygge">
-                  <Button
-                    flex={1}
-                    fontSize={'sm'}
-                    rounded={'full'}
-                    _focus={{
-                      bg: 'gray.200'
-                    }}
-                  >
-                    View Repository
-                  </Button>
-                </Link>
-              </Stack>
-            </Stack>
-          </Stack>
-        </Center>
-        <Center py={4}>
-          <Stack
-            borderWidth="1px"
-            borderRadius="lg"
-            w={{ sm: '100%', md: '360px' }}
-            height={{ sm: '200px', md: '18rem' }}
-            direction={{ base: 'column', md: 'row' }}
-            bg={useColorModeValue('white', '#202023')}
-            boxShadow={'2xl'}
-            padding={4}
-          >
-            <Stack flex={1} flexDirection="column" align="center" pt={2}>
-              <Heading fontSize={'2xl'} fontFamily={'body'}>
-                Kaarva
-              </Heading>
-              <Text
-                textAlign={'center'}
-                color={useColorModeValue('gray.700', 'gray.400')}
-                px={3}
-              >
-                This a cross platform moblie application made in Flutter. 
-                The users can use this app to carpool with their co-workers at their work
-                place easily.
-              </Text>
-              <Stack
-                width={'100%'}
-                mt={'2rem'}
-                direction={'row'}
-                padding={2}
-                alignItems={'center'}
-              >
-                <Link href="https://github.com/Rayzon3/kaarva">
-                  <Button
-                    flex={1}
-                    fontSize={'sm'}
-                    rounded={'full'}
-                    _focus={{
-                      bg: 'gray.200'
-                    }}
-                  >
-                    View Repository
-                  </Button>
-                </Link>
-              </Stack>
-            </Stack>
-          </Stack>
-        </Center>
-        <Center py={4}>
-          <Stack
-            borderWidth="1px"
-            borderRadius="lg"
-            w={{ sm: '100%', md: '360px' }}
-            height={{ sm: '200px', md: '18rem' }}
-            direction={{ base: 'column', md: 'row' }}
-            bg={useColorModeValue('white', '#202023')}
-            boxShadow={'2xl'}
-            padding={4}
-          >
-            <Stack flex={1} flexDirection="column" align="center" pt={2}>
-              <Heading fontSize={'2xl'} fontFamily={'body'}>
-                PathFinder
-              </Heading>
-              <Text
-                textAlign={'center'}
-                color={useColorModeValue('gray.700', 'gray.400')}
-                px={3}
-              >
-                This web app shows the visualization of the very popular
-                a-star(A*) algorithm at every step. The application was made
-                with Next.js in TypeScript.
-              </Text>
-              <Stack
-                width={'100%'}
-                mt={'2rem'}
-                direction={'row'}
-                padding={2}
-                alignItems={'center'}
-              >
-                <Link href="https://github.com/Rayzon3/pathfinder">
-                  <Button
-                    flex={1}
-                    fontSize={'sm'}
-                    rounded={'full'}
-                    _focus={{
-                      bg: 'gray.200'
-                    }}
-                  >
-                    View Repository
-                  </Button>
-                </Link>
-                <Link href="https://pathfinder-six.vercel.app/">
-                  <Button
-                    flex={1}
-                    fontSize={'sm'}
-                    rounded={'full'}
-                    _focus={{
-                      bg: 'gray.200'
-                    }}
-                  >
-                    Live Demo
-                  </Button>
-                </Link>
-              </Stack>
-            </Stack>
-          </Stack>
-        </Center>
+            ))
+          }
+        </Stack>
       </Section>
     </Container>
   )

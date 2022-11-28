@@ -5,6 +5,9 @@ const styles = {
   global: props => ({
     body: {
       bg: mode('#f8f3ed', '#202023')(props)
+    },
+    border: {
+      '2px':  `2px solid black`
     }
   })
 }
