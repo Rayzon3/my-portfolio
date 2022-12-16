@@ -7,7 +7,6 @@ import {
   Button,
   Stack,
   Center,
-
   Tooltip
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
@@ -22,7 +21,7 @@ const Page = () => {
     <Container>
       <Box
         borderRadius="lg"
-        bg={useColorModeValue('white', 'gray.950')}
+        bg={useColorModeValue('#6ef4b5', 'gray.950')}
         p={3}
         mb={5}
         align="center"
@@ -43,7 +42,7 @@ const Page = () => {
           align="center"
         >
           <Image
-            borderColor="whiteAplha.800"
+            borderColor={useColorModeValue('#4c347c', 'whiteAlpha.800')}
             borderWidth={2}
             borderStyle="solid"
             maxWidth="100px"
@@ -60,7 +59,7 @@ const Page = () => {
         </Heading>
         <Box
           borderRadius="lg"
-          bg={useColorModeValue('white', 'gray.950')}
+          bg={useColorModeValue('#6ef4b5', 'gray.950')}
           p={3}
           mb={5}
           align="center"
@@ -78,11 +77,12 @@ const Page = () => {
           <Link href="https://drive.google.com/file/d/1EQ7CnuJUJ2DfFgYex05NipTNbV0KxxUA/view?usp=sharing">
             <Button
               colorScheme="white"
-              bg={useColorModeValue('white', 'gray.950')}
+              bg={useColorModeValue('#f4ed19', 'gray.950')}
               rightIcon={<ChevronRightIcon />}
               rounded="full"
               borderColor={useColorModeValue('black', 'white')}
               variant="outline"
+              border="2px"
             >
               My Resume
             </Button>
@@ -98,7 +98,7 @@ const Page = () => {
             label="TypeScript"
             border="2px"
             textColor={useColorModeValue('gray.900', 'white')}
-            bg={useColorModeValue('white', 'gray.900')}
+            bg={useColorModeValue('#6ef4b5', 'gray.900')}
             borderColor={useColorModeValue('gray.900', 'white')}
             rounded="md"
           >
@@ -107,7 +107,7 @@ const Page = () => {
               textAlign={'center'}
               alignContent={'center'}
               alignItems={'center'}
-              bg={useColorModeValue('white', 'gray.900')}
+              bg={useColorModeValue('#4c347c', 'gray.900')}
               w="10"
               h="10"
               rounded={'md'}
@@ -130,7 +130,7 @@ const Page = () => {
             label="Node.Js"
             border="2px"
             textColor={useColorModeValue('gray.900', 'white')}
-            bg={useColorModeValue('white', 'gray.900')}
+            bg={useColorModeValue('#6ef4b5', 'gray.900')}
             borderColor={useColorModeValue('gray.900', 'white')}
             rounded="md"
           >
@@ -139,7 +139,7 @@ const Page = () => {
               textAlign={'center'}
               alignContent={'center'}
               alignItems={'center'}
-              bg={useColorModeValue('white', 'gray.900')}
+              bg={useColorModeValue('#4c347c', 'gray.900')}
               w="10"
               h="10"
               rounded={'md'}
@@ -160,7 +160,7 @@ const Page = () => {
             label="React"
             border="2px"
             textColor={useColorModeValue('gray.900', 'white')}
-            bg={useColorModeValue('white', 'gray.900')}
+            bg={useColorModeValue('#6ef4b5', 'gray.900')}
             borderColor={useColorModeValue('gray.900', 'white')}
             rounded="md"
           >
@@ -169,7 +169,7 @@ const Page = () => {
               textAlign={'center'}
               alignContent={'center'}
               alignItems={'center'}
-              bg={useColorModeValue('white', 'gray.900')}
+              bg={useColorModeValue('#4c347c', 'gray.900')}
               w="10"
               h="10"
               rounded={'md'}
@@ -190,7 +190,7 @@ const Page = () => {
             label="PostgreSQL"
             border="2px"
             textColor={useColorModeValue('gray.900', 'white')}
-            bg={useColorModeValue('white', 'gray.900')}
+            bg={useColorModeValue('#6ef4b5', 'gray.900')}
             borderColor={useColorModeValue('gray.900', 'white')}
             rounded="md"
           >
@@ -199,7 +199,7 @@ const Page = () => {
               textAlign={'center'}
               alignContent={'center'}
               alignItems={'center'}
-              bg={useColorModeValue('white', 'gray.900')}
+              bg={useColorModeValue('#4c347c', 'gray.900')}
               w="10"
               h="10"
               rounded={'md'}
@@ -220,7 +220,7 @@ const Page = () => {
             label="MongoDB"
             border="2px"
             textColor={useColorModeValue('gray.900', 'white')}
-            bg={useColorModeValue('white', 'gray.900')}
+            bg={useColorModeValue('#6ef4b5', 'gray.900')}
             borderColor={useColorModeValue('gray.900', 'white')}
             rounded="md"
           >
@@ -229,7 +229,7 @@ const Page = () => {
               textAlign={'center'}
               alignContent={'center'}
               alignItems={'center'}
-              bg={useColorModeValue('white', 'gray.900')}
+              bg={useColorModeValue('#4c347c', 'gray.900')}
               w="10"
               h="10"
               rounded={'md'}
@@ -250,7 +250,7 @@ const Page = () => {
             label="GraphQL"
             border="2px"
             textColor={useColorModeValue('gray.900', 'white')}
-            bg={useColorModeValue('white', 'gray.900')}
+            bg={useColorModeValue('#6ef4b5', 'gray.900')}
             borderColor={useColorModeValue('gray.900', 'white')}
             rounded="md"
           >
@@ -259,7 +259,7 @@ const Page = () => {
               textAlign={'center'}
               alignContent={'center'}
               alignItems={'center'}
-              bg={useColorModeValue('white', 'gray.900')}
+              bg={useColorModeValue('#4c347c', 'gray.900')}
               w="10"
               h="10"
               rounded={'md'}
@@ -280,7 +280,7 @@ const Page = () => {
             label="Docker"
             border="2px"
             textColor={useColorModeValue('gray.900', 'white')}
-            bg={useColorModeValue('white', 'gray.900')}
+            bg={useColorModeValue('#6ef4b5', 'gray.900')}
             borderColor={useColorModeValue('gray.900', 'white')}
             rounded="md"
           >
@@ -289,7 +289,7 @@ const Page = () => {
               textAlign={'center'}
               alignContent={'center'}
               alignItems={'center'}
-              bg={useColorModeValue('white', 'gray.900')}
+              bg={useColorModeValue('#4c347c', 'gray.900')}
               w="10"
               h="10"
               rounded={'md'}

@@ -15,7 +15,7 @@ export default function Card(data) {
       <Box
         maxW={'320px'}
         w={'full'}
-        bg={useColorModeValue('white', 'gray.950')}
+        bg={useColorModeValue('#6ef4b5', 'gray.950')}
         border="2px"
         boxShadow={'2xl'}
         rounded={'lg'}
@@ -40,9 +40,8 @@ export default function Card(data) {
               flex={1}
               fontSize={'sm'}
               rounded={'full'}
-              _focus={{
-                bg: 'gray.200'
-              }}
+              bg={useColorModeValue('#f4ed19', 'gray.950')}
+              border="2px"
             >
               View Repository
             </Button>
